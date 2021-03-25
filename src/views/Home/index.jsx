@@ -13,6 +13,12 @@ export default function Home(props) {
       >
         Demo
       </div>
+      <div
+        onClick={handleTurn.bind(this, "/Demos")}
+        style={{ cursor: "pointer" }}
+      >
+        Demos
+      </div>
     </>
   );
 }
