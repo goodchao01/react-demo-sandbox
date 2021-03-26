@@ -1,0 +1,23 @@
+//字体
+@font-face {
+  font-family: 'iconfont';  /* project id 2447003 */
+  src: url('//at.alicdn.com/t/font_2447003_6v5py85lofc.eot');
+  src: url('//at.alicdn.com/t/font_2447003_6v5py85lofc.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2447003_6v5py85lofc.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2447003_6v5py85lofc.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2447003_6v5py85lofc.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2447003_6v5py85lofc.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size: 16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add:before { content: "\e752"; }   //新增
+.icon-delete:before { content: "\e67d"; }   //删除
+.icon-edit:before { content: "\e603"; }   //编辑
+.icon-more:before { content: "\e689"; }   //更多

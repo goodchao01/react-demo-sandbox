@@ -1,0 +1,101 @@
+@charset "utf-8";
+@import './base'; //公共方法和样式；
+/* CSS Document */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video, input 
+{
+  margin: 0;
+  padding: 0;
+  // outline: 0;
+  // -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  // -webkit-text-size-adjust: none;
+  font-family: "Microsoft YaHei", "sans-serif", Arial, Roboto, "Droid Sans", "Hiragino Sans GB", "Simsun", STXihei;
+}
+
+html {
+  height: 100% !important;
+  font-size: 10px;
+}
+
+body {
+  background: $color-bg;
+  color: #333;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  height: 100% !important;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, em, i, strong, div, ul, li  {
+  font-weight: normal;
+  font-size: 1.5rem;
+  // @include noCopy;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  vertical-align: top;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+var, em, i {
+  font-style: normal;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+input, textarea {
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  font-size: 1.6rem;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $grey-light;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: $grey-light;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: $grey-light;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $grey-light;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}

@@ -1,0 +1,126 @@
+//颜色配置
+$color: #F6AD49;  //主题色
+$color-dark: #e2962c;  //主题色（深）
+$color-bg: #f7f7f7;   // 背景色
+$color-bg-theme: #FEEEDC;  //主题色背景
+$grey: #666;  //灰色（字体）
+$grey-dark: #333; //深灰色（字体）
+$grey-light: #999;  //浅灰色（字体）
+$grey-title: #9d9d9d; //灰色标题
+$color-border: #dedede; // 列表等边线颜色
+$color-border-dark: #d1d1d1; // 列表等边线颜色（深色）
+$color-font: #764600; //字体色主题深棕色
+$color-font-light: #b46926; //字体色浅色
+$blue: #070707; //钉钉蓝色
+$red: #FF3300;
+$green: #7AC451;
+$blue: #069CE7;
+$ali-blue: #069CE7;
+$wx-green: #2EA345;
+
+$max-width: 720px;  //页面最大宽度
+
+// 设置字体颜色，方便统一管理
+@mixin color() {
+  color: $color;
+  [data-theme="weixin"] & {
+    color: $wx-green;
+  }
+  [data-theme="ali"] & {
+    color: $ali-blue;
+  }
+}
+
+@mixin colorBg() {
+  background-color: $color;
+  [data-theme="weixin"] & {
+    background-color: $wx-green;
+  }
+  [data-theme="ali"] & {
+    background-color: $ali-blue;
+  }
+}
+
+@mixin colorBorder() {
+  border: 1px solid $color;
+  [data-theme="weixin"] & {
+    border: 1px solid $wx-green;
+  }
+  [data-theme="ali"] & {
+    border: 1px solid $ali-blue;
+  }
+}
+
+// 设置盒模型
+@mixin setBoxSizing {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// 设置圆角
+@mixin setRadius($size) {
+  //-moz-border-radius: $size;
+  -webkit-border-radius: $size;
+  border-radius: $size;
+}
+
+// 限定换行数
+@mixin limitLines($lines) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  white-space: normal;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+// 限定一行
+@mixin limitLine {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 背景图片
+@mixin setBgImage($image: '../images/icon_logo.png', $position: auto, $size: auto, $repeat: no-repeat) {
+  background-image: url($image);
+  background-position: $position;
+  background-size: $size;
+  background-repeat: $repeat;
+}
+
+// 设置背景图片url
+@mixin setImgUrl ($image: '../images/icon_logo.png') {
+  background-image: url($image);
+}
+
+// 禁止复制
+@mixin noCopy {
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+
+// 允许复制
+@mixin canCopy {
+  -moz-user-select: unset; /*火狐*/
+  -webkit-user-select: unset; /*webkit浏览器*/
+  -ms-user-select: unset; /*IE10*/
+  -khtml-user-select: unset; /*早期浏览器*/
+  user-select: unset;
+}
+
+// 细边框样式
+@mixin setSlimLine($width: 100%, $height: 1px, $left: 0, $bottom: 0, $right: auto, $top: auto, $lineColor: $color-border, $scaleX: 1, $scaleY: 0.5) {
+  content: '';
+  width: $width;
+  height: $height;
+  position: absolute;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+  top: $top;
+  background-color: $lineColor;
+  transform: scale($scaleX, $scaleY);
+}

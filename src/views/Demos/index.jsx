@@ -5,7 +5,7 @@ const CustomHook = React.lazy(() => import('./CustomHook'))
 const Tree = React.lazy(() => import('./Tree'))
 
 export default function Demos(props) {
-	const { match: { path }, history } = props
+	const { match: { path } } = props
 	return <Suspense>
 		<Route exact path={path} children={({ match }) => match && <DemosIndex path={path} />} />
 		<Route exact path={`${path}/CustomHook`} children={({ match }) => match && <CustomHook />} />
